@@ -2,7 +2,17 @@
   "name": "ipharmegy-www",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 3010",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 3010"
+  },
   "dependencies": {
-    "@ipharmegy/core": "file:../ipharmegy-core"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
   }
 }
