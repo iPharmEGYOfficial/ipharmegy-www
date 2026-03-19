@@ -3,37 +3,37 @@
 const modules = [
   {
     name: "Portal",
-    desc: "Control center, routing, monitoring and executive visibility.",
+    desc: "Control & visibility",
     href: "https://portal.ipharmegy.com",
     pos: "top",
   },
   {
     name: "Inventory",
-    desc: "Stock control, expiry tracking, warehouse logic and item flow.",
+    desc: "Stock & expiry",
     href: "https://inventory.ipharmegy.com",
     pos: "top-right",
   },
   {
     name: "POS",
-    desc: "Sales engine, transactions, pharmacy workflows and execution.",
+    desc: "Sales & transactions",
     href: "https://pos.ipharmegy.com",
     pos: "bottom-right",
   },
   {
     name: "Cloud",
-    desc: "Branch connectivity, synchronization, integration and continuity.",
+    desc: "Sync & connectivity",
     href: "https://cloud.ipharmegy.com",
     pos: "bottom",
   },
   {
     name: "Academy",
-    desc: "Training, pharmaceutical learning and structured knowledge delivery.",
+    desc: "Training & learning",
     href: "https://academy.ipharmegy.com",
     pos: "bottom-left",
   },
   {
     name: "AlNour",
-    desc: "Offers, promotions, highlighted products and pharmacy campaigns.",
+    desc: "Offers & campaigns",
     href: "https://alnour.ipharmegy.com",
     pos: "top-left",
   },
@@ -41,9 +41,10 @@ const modules = [
 
 document.querySelector("#app").innerHTML = `
   <main class="site-shell">
+    
     <header class="site-header">
       <div class="brand">
-        <img class="brand-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
+        <img class="brand-logo" src="/assets/brand/logo.svg" alt="iPharmEGY logo" />
         <div class="brand-text">
           <span class="brand-name">iPharmEGY</span>
           <span class="brand-subtitle">Pharmacy Intelligence Platform</span>
@@ -57,17 +58,16 @@ document.querySelector("#app").innerHTML = `
       </nav>
     </header>
 
-    <section class="hero hero-hexa">
-      <div class="hero-badge">Digital Pharmacy Ecosystem</div>
+    <section class="hero">
+      <div class="hero-badge">Unified Platform</div>
 
       <h1>
-        The Hexa Intelligence
-        <span class="accent-text">Pharmacy System</span>
+        Pharmacy Intelligence
+        <span class="accent-text">Connected</span>
       </h1>
 
       <p class="hero-lead">
-        A modern, modular and visually unified pharmacy ecosystem where every
-        domain operates as a connected vertex around one intelligent branded core.
+        Operations, inventory, sales and growth — in one platform.
       </p>
 
       <div class="hero-actions">
@@ -78,32 +78,30 @@ document.querySelector("#app").innerHTML = `
 
     <section class="hexa-section">
       <div class="section-heading">
-        <h2>Hexa Modules</h2>
-        <p>Six visible vertices around one branded intelligence core.</p>
+        <h2>Platform Modules</h2>
+        <p>Core systems powering operations.</p>
       </div>
 
       <div class="hexa-orbit">
-        ${modules
-          .map(
-            (item) => `
+
+        ${modules.map(item => `
           <a class="hexa-card ${item.pos}" href="${item.href}">
             <div class="hexa-inner">
               <h3>${item.name}</h3>
               <p>${item.desc}</p>
             </div>
           </a>
-        `
-          )
-          .join("")}
+        `).join("")}
 
         <div class="center-core">
           <div class="core-glow"></div>
           <div class="core-shell">
-            <img class="core-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
+            <img class="core-logo" src="/assets/brand/logo.svg" />
             <div class="core-title">iPharmEGY</div>
-            <div class="core-subtitle">HEXA CORE</div>
+            <div class="core-subtitle">Core Platform</div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -117,5 +115,6 @@ document.querySelector("#app").innerHTML = `
         <span>Founder: Haitham Osama Abdelghaffar</span>
       </div>
     </footer>
+
   </main>
 `;
