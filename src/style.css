@@ -38,19 +38,11 @@ a {
   text-decoration: none;
 }
 
-/* ========================= */
-/* Layout */
-/* ========================= */
-
 .site-shell {
   width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
   padding: 24px 0 56px;
 }
-
-/* ========================= */
-/* Header */
-/* ========================= */
 
 .site-header {
   display: flex;
@@ -65,33 +57,32 @@ a {
   backdrop-filter: blur(10px);
 }
 
-/* Brand */
-
 .brand {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-/* ✅ اللوجو المحسن */
-
 .brand-logo {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #ffffff;
   padding: 4px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    0 0 12px rgba(47, 143, 131, 0.18);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
 }
 
 .brand-logo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  transform: scale(1.04);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.12),
+    0 0 14px rgba(47, 143, 131, 0.24);
 }
-
-/* Text */
 
 .brand-text {
   display: flex;
@@ -101,10 +92,11 @@ a {
 
 .brand-name {
   font-family: "Cinzel", serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--primary);
   line-height: 1;
+  letter-spacing: 0.02em;
 }
 
 .brand-subtitle {
@@ -112,8 +104,6 @@ a {
   color: var(--muted);
   letter-spacing: 0.02em;
 }
-
-/* Navigation */
 
 .site-nav {
   display: flex;
@@ -133,10 +123,6 @@ a {
 .site-nav a:hover {
   opacity: 1;
 }
-
-/* ========================= */
-/* Hero */
-/* ========================= */
 
 .hero {
   text-align: center;
@@ -178,8 +164,6 @@ a {
   line-height: 1.9;
 }
 
-/* Buttons */
-
 .hero-actions {
   margin-top: 32px;
   display: flex;
@@ -215,10 +199,6 @@ a {
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
 }
-
-/* ========================= */
-/* Modules */
-/* ========================= */
 
 .modules-section {
   margin-top: 8px;
@@ -277,10 +257,6 @@ a {
   font-size: 15px;
 }
 
-/* ========================= */
-/* Footer */
-/* ========================= */
-
 .site-footer {
   margin-top: 34px;
   padding: 22px 24px;
@@ -312,10 +288,6 @@ a {
   color: var(--muted);
   font-size: 14px;
 }
-
-/* ========================= */
-/* Responsive */
-/* ========================= */
 
 @media (max-width: 900px) {
   .site-header {
@@ -362,5 +334,14 @@ a {
 
   .hero-actions {
     flex-direction: column;
+  }
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-name {
+    font-size: 20px;
   }
 }
