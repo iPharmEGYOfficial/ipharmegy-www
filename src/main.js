@@ -41,10 +41,9 @@ const modules = [
 
 document.querySelector("#app").innerHTML = `
   <main class="site-shell">
-    
     <header class="site-header">
       <div class="brand">
-        <img class="brand-logo" src="/assets/brand/logo.svg" alt="iPharmEGY logo" />
+        <img class="brand-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
         <div class="brand-text">
           <span class="brand-name">iPharmEGY</span>
           <span class="brand-subtitle">Pharmacy Intelligence Platform</span>
@@ -83,7 +82,6 @@ document.querySelector("#app").innerHTML = `
       </div>
 
       <div class="hexa-orbit">
-
         ${modules.map(item => `
           <a class="hexa-card ${item.pos}" href="${item.href}">
             <div class="hexa-inner">
@@ -96,12 +94,11 @@ document.querySelector("#app").innerHTML = `
         <div class="center-core">
           <div class="core-glow"></div>
           <div class="core-shell">
-            <img class="core-logo" src="/assets/brand/logo.svg" />
+            <img class="core-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
             <div class="core-title">iPharmEGY</div>
             <div class="core-subtitle">Core Platform</div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -115,6 +112,5 @@ document.querySelector("#app").innerHTML = `
         <span>Founder: Haitham Osama Abdelghaffar</span>
       </div>
     </footer>
-
   </main>
 `;
