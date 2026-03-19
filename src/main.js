@@ -1,11 +1,49 @@
 ﻿import "./style.css";
 
+const modules = [
+  {
+    name: "Portal",
+    desc: "Control center, routing, monitoring and executive visibility.",
+    href: "https://portal.ipharmegy.com",
+    pos: "top",
+  },
+  {
+    name: "Inventory",
+    desc: "Stock control, expiry tracking, warehouse logic and item flow.",
+    href: "https://inventory.ipharmegy.com",
+    pos: "top-right",
+  },
+  {
+    name: "POS",
+    desc: "Sales engine, transactions, pharmacy workflows and execution.",
+    href: "https://pos.ipharmegy.com",
+    pos: "bottom-right",
+  },
+  {
+    name: "Cloud",
+    desc: "Branch connectivity, synchronization, integration and continuity.",
+    href: "https://cloud.ipharmegy.com",
+    pos: "bottom",
+  },
+  {
+    name: "Academy",
+    desc: "Training, pharmaceutical learning and structured knowledge delivery.",
+    href: "https://academy.ipharmegy.com",
+    pos: "bottom-left",
+  },
+  {
+    name: "AlNour",
+    desc: "Offers, promotions, highlighted products and pharmacy campaigns.",
+    href: "https://alnour.ipharmegy.com",
+    pos: "top-left",
+  },
+];
+
 document.querySelector("#app").innerHTML = `
   <main class="site-shell">
     <header class="site-header">
       <div class="brand">
         <img class="brand-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
-
         <div class="brand-text">
           <span class="brand-name">iPharmEGY</span>
           <span class="brand-subtitle">Pharmacy Intelligence Platform</span>
@@ -19,18 +57,17 @@ document.querySelector("#app").innerHTML = `
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero hero-hexa">
       <div class="hero-badge">Digital Pharmacy Ecosystem</div>
 
       <h1>
-        Modern pharmacy infrastructure,
-        <span class="accent-text">elegantly connected</span>
+        The Hexa Intelligence
+        <span class="accent-text">Pharmacy System</span>
       </h1>
 
       <p class="hero-lead">
-        iPharmEGY unifies pharmacy operations, inventory intelligence, point of
-        sale workflows, cloud connectivity, training, and promotional delivery
-        into one refined ecosystem.
+        A modern, modular and visually unified pharmacy ecosystem where every
+        domain operates as a connected vertex around one intelligent branded core.
       </p>
 
       <div class="hero-actions">
@@ -39,42 +76,34 @@ document.querySelector("#app").innerHTML = `
       </div>
     </section>
 
-    <section class="modules-section">
+    <section class="hexa-section">
       <div class="section-heading">
-        <h2>Platform Modules</h2>
-        <p>Designed as a connected architecture, not isolated applications.</p>
+        <h2>Hexa Modules</h2>
+        <p>Six visible vertices around one branded intelligence core.</p>
       </div>
 
-      <div class="modules-grid">
-        <a class="module-card" href="https://portal.ipharmegy.com">
-          <h3>Portal</h3>
-          <p>Control center, routing, monitoring and executive visibility.</p>
-        </a>
+      <div class="hexa-orbit">
+        ${modules
+          .map(
+            (item) => `
+          <a class="hexa-card ${item.pos}" href="${item.href}">
+            <div class="hexa-inner">
+              <h3>${item.name}</h3>
+              <p>${item.desc}</p>
+            </div>
+          </a>
+        `
+          )
+          .join("")}
 
-        <a class="module-card" href="https://inventory.ipharmegy.com">
-          <h3>Inventory</h3>
-          <p>Stock control, expiry tracking, warehouse logic and item flow.</p>
-        </a>
-
-        <a class="module-card" href="https://pos.ipharmegy.com">
-          <h3>POS</h3>
-          <p>Sales engine, transactions, pharmacy workflows and execution.</p>
-        </a>
-
-        <a class="module-card" href="https://cloud.ipharmegy.com">
-          <h3>Cloud</h3>
-          <p>Branch connectivity, synchronization, integration and continuity.</p>
-        </a>
-
-        <a class="module-card" href="https://academy.ipharmegy.com">
-          <h3>Academy</h3>
-          <p>Training, pharmaceutical learning and structured knowledge delivery.</p>
-        </a>
-
-        <a class="module-card" href="https://alnour.ipharmegy.com">
-          <h3>AlNour</h3>
-          <p>Offers, promotions, highlighted products and pharmacy campaigns.</p>
-        </a>
+        <div class="center-core">
+          <div class="core-glow"></div>
+          <div class="core-shell">
+            <img class="core-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
+            <div class="core-title">iPharmEGY</div>
+            <div class="core-subtitle">HEXA CORE</div>
+          </div>
+        </div>
       </div>
     </section>
 
