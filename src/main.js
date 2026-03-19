@@ -4,7 +4,9 @@ document.querySelector("#app").innerHTML = `
   <main class="site-shell">
     <header class="site-header">
       <div class="brand">
-       <img class="brand-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
+        <!-- ✅ نفس مسار favicon -->
+        <img class="brand-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
+
         <div class="brand-text">
           <span class="brand-name">iPharmEGY</span>
           <span class="brand-subtitle">Pharmacy Intelligence Platform</span>
