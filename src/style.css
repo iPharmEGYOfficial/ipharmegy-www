@@ -7,7 +7,7 @@
   --cyan: #1fb7c8;
   --blue: #5368f4;
   --line: rgba(15, 74, 95, .12);
-  --card: rgba(255,255,255,.82);
+  --card: rgba(255,255,255,.86);
   --shadow: 0 24px 60px rgba(15, 74, 95, .10);
 }
 
@@ -18,15 +18,15 @@ body {
   font-family: Inter, Arial, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 20% 10%, rgba(31,183,200,.16), transparent 26%),
-    radial-gradient(circle at 82% 18%, rgba(83,104,244,.12), transparent 28%),
+    radial-gradient(circle at 18% 8%, rgba(31,183,200,.15), transparent 26%),
+    radial-gradient(circle at 82% 15%, rgba(83,104,244,.12), transparent 28%),
     linear-gradient(135deg, var(--bg1), var(--bg2));
 }
 
 .site-shell {
   width: min(1280px, calc(100% - 32px));
   margin: auto;
-  padding: 24px 0 48px;
+  padding: 24px 0 42px;
 }
 
 .site-header {
@@ -37,7 +37,7 @@ body {
   padding: 18px 22px;
   border: 1px solid var(--line);
   border-radius: 24px;
-  background: rgba(255,255,255,.86);
+  background: rgba(255,255,255,.9);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
@@ -50,7 +50,7 @@ body {
   text-decoration: none;
 }
 
-.brand-logo {
+.brand img {
   width: 58px;
   height: 58px;
   object-fit: contain;
@@ -62,7 +62,6 @@ body {
 .brand strong {
   display: block;
   font-size: 24px;
-  letter-spacing: .3px;
 }
 
 .brand span {
@@ -81,51 +80,44 @@ body {
 .site-nav a {
   color: var(--primary);
   text-decoration: none;
-  font-weight: 800;
-  padding: 10px 14px;
+  font-weight: 850;
+  padding: 11px 15px;
   border-radius: 999px;
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.portal-link {
   background: white;
+  box-shadow: 0 10px 24px rgba(15,74,95,.08);
 }
 
 .hero {
   text-align: center;
-  padding: 82px 20px 58px;
-}
-
-.hero-logo {
-  width: min(190px, 48vw);
-  height: auto;
-  margin-bottom: 24px;
-  filter: drop-shadow(0 18px 32px rgba(15,74,95,.12));
+  padding: 95px 20px 68px;
 }
 
 .eyebrow {
   display: inline-block;
-  margin: 0 0 18px;
+  margin: 0 0 22px;
   padding: 10px 18px;
   border-radius: 999px;
   background: white;
   color: var(--primary);
-  font-weight: 900;
+  font-weight: 950;
   box-shadow: 0 12px 28px rgba(15,74,95,.08);
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(58px, 9vw, 110px);
-  line-height: .95;
-  letter-spacing: -3px;
+  font-size: clamp(62px, 9vw, 116px);
+  line-height: .9;
+  letter-spacing: -4px;
   color: var(--primary);
 }
 
-.hero h1 span {
-  display: block;
-  margin-top: 18px;
-  font-size: clamp(24px, 3.4vw, 38px);
-  letter-spacing: 0;
+.hero h2 {
+  margin: 24px 0 0;
+  font-size: clamp(25px, 3.4vw, 40px);
   background: linear-gradient(90deg, var(--cyan), var(--blue));
   -webkit-background-clip: text;
   color: transparent;
@@ -133,7 +125,7 @@ body {
 
 .hero-lead {
   max-width: 760px;
-  margin: 26px auto 0;
+  margin: 28px auto 0;
   color: var(--muted);
   font-size: 21px;
   line-height: 1.8;
@@ -144,7 +136,7 @@ body {
   justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 34px;
+  margin-top: 36px;
 }
 
 .btn {
@@ -171,11 +163,11 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .module-card {
-  min-height: 220px;
+  min-height: 210px;
   padding: 28px;
   border-radius: 26px;
   background: var(--card);
@@ -184,7 +176,7 @@ body {
   text-decoration: none;
 }
 
-.module-card h2 {
+.module-card h3 {
   margin: 0 0 12px;
   color: var(--primary);
   font-size: 26px;
@@ -222,6 +214,6 @@ body {
 @media (max-width: 900px) {
   .site-header { flex-direction: column; align-items: flex-start; }
   .platform { grid-template-columns: 1fr; }
-  .hero { padding-top: 54px; }
+  .hero { padding-top: 58px; }
   .hero-lead { font-size: 18px; }
 }
