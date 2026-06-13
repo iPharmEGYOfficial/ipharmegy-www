@@ -1,116 +1,62 @@
 ﻿import "./style.css";
 
 const modules = [
-  {
-    name: "Portal",
-    desc: "Control & visibility",
-    href: "https://portal.ipharmegy.com",
-    pos: "top",
-  },
-  {
-    name: "Inventory",
-    desc: "Stock & expiry",
-    href: "https://inventory.ipharmegy.com",
-    pos: "top-right",
-  },
-  {
-    name: "POS",
-    desc: "Sales & transactions",
-    href: "https://pos.ipharmegy.com",
-    pos: "bottom-right",
-  },
-  {
-    name: "Cloud",
-    desc: "Sync & connectivity",
-    href: "https://cloud.ipharmegy.com",
-    pos: "bottom",
-  },
-  {
-    name: "Academy",
-    desc: "Training & learning",
-    href: "https://academy.ipharmegy.com",
-    pos: "bottom-left",
-  },
-  {
-    name: "AlNour",
-    desc: "Offers & campaigns",
-    href: "https://alnour.ipharmegy.com",
-    pos: "top-left",
-  },
+  { name: "Portal", desc: "Customer access and connected services.", href: "https://portal.ipharmegy.com" },
+  { name: "Gateway", desc: "Secure connection with pharmacy systems.", href: "https://portal.ipharmegy.com" },
+  { name: "Operations", desc: "Sales, inventory and daily activity.", href: "https://portal.ipharmegy.com" },
+  { name: "Intelligence", desc: "Data insights for smarter growth.", href: "https://portal.ipharmegy.com" },
 ];
 
 document.querySelector("#app").innerHTML = `
   <main class="site-shell">
     <header class="site-header">
-      <div class="brand">
-        <img class="brand-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
-        <div class="brand-text">
-          <span class="brand-name">iPharmEGY</span>
-          <span class="brand-subtitle">Pharmacy Intelligence Platform</span>
+      <a class="brand" href="https://www.ipharmegy.com">
+        <img class="brand-logo" src="/assets/brand/logo.png" alt="iPharmEGY" />
+        <div>
+          <strong>iPharmEGY</strong>
+          <span>Pharmacy Intelligence Platform</span>
         </div>
-      </div>
+      </a>
 
       <nav class="site-nav">
         <a href="https://www.ipharmegy.com">Home</a>
         <a href="https://portal.ipharmegy.com">Portal</a>
-        <a href="https://academy.ipharmegy.com">Academy</a>
+        <a href="#platform">Platform</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="hero-badge">Unified Platform</div>
+      <img class="hero-logo" src="/assets/brand/logo.png" alt="iPharmEGY" />
+
+      <p class="eyebrow">Unified Pharmacy Platform</p>
 
       <h1>
-        Pharmacy Intelligence
-        <span class="accent-text">Connected</span>
+        iPharmEGY
+        <span>Pharmacy Intelligence Platform</span>
       </h1>
 
       <p class="hero-lead">
-        Operations, inventory, sales and growth — in one platform.
+        One professional platform connecting pharmacy operations, customers and digital services.
       </p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://portal.ipharmegy.com">Open Portal</a>
-        <a class="btn btn-secondary" href="https://portfolio.ipharmegy.com">View Portfolio</a>
+        <a class="btn primary" href="https://portal.ipharmegy.com">Open Portal</a>
+        <a class="btn secondary" href="#platform">Explore Platform</a>
       </div>
     </section>
 
-    <section class="hexa-section">
-      <div class="section-heading">
-        <h2>Platform Modules</h2>
-        <p>Core systems powering operations.</p>
-      </div>
-
-      <div class="hexa-orbit">
-        ${modules.map(item => `
-          <a class="hexa-card ${item.pos}" href="${item.href}">
-            <div class="hexa-inner">
-              <h3>${item.name}</h3>
-              <p>${item.desc}</p>
-            </div>
-          </a>
-        `).join("")}
-
-        <div class="center-core">
-          <div class="core-glow"></div>
-          <div class="core-shell">
-            <img class="core-logo" src="/assets/brand/logo.png" alt="iPharmEGY logo" />
-            <div class="core-title">iPharmEGY</div>
-            <div class="core-subtitle">Core Platform</div>
-          </div>
-        </div>
-      </div>
+    <section id="platform" class="platform">
+      ${modules.map((item) => `
+        <a class="module-card" href="${item.href}">
+          <h2>${item.name}</h2>
+          <p>${item.desc}</p>
+        </a>
+      `).join("")}
     </section>
 
     <footer class="site-footer">
-      <div class="footer-left">
-        <strong>iPharmEGY</strong>
-        <span>Pharmacy Intelligence Platform</span>
-      </div>
-
-      <div class="footer-right">
-        <span>Founder: Haitham Osama Abdelghaffar</span>
-      </div>
+      <strong>iPharmEGY</strong>
+      <span>Pharmacy Intelligence Platform</span>
     </footer>
   </main>
 `;

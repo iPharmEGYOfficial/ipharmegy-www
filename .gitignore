@@ -3,3 +3,6 @@ dist/
 .vite/
 coverage/
 *.log
+*.bak
+*.bak_*
+IPHARMEGY_WWW_AUDIT.txt
